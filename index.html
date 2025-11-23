@@ -13,7 +13,7 @@
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cards_star,domino_mask,error,fact_check,person_play,sword_rose" />
 </head>
-<body>
+<body class="light-mode">
 
     <header class="main-header">
         <nav class="main-nav">
@@ -38,6 +38,10 @@
                Quest'ultimi possono aumentare il loro potere tramite dei potenziamenti, gli Arcana Minori. <br>
                Ad ogni vittoria un giocatore ottiene abilità che possono aiutarlo passivamente, oppure delle catastrofi da infliggere ai propri avversari... <br>
             </p>
+        </div>
+
+        <div class="button-container">
+                <button class="toggle-theme-button" id="theme-button">Light Mode</button>
         </div>
     </section>
 
@@ -166,15 +170,15 @@
                     essere scambiato con un Arcana Maggiore e viceversa.<br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-instant">7 - IL CARRO</strong>: Puoi giocare <strong>due</strong> semi diversi come potenziamento di
-                    questa carta, vengono considerati uguali. Solo una figura si attiva. <br>
+                    <strong class="card-instant">7 - IL CARRO</strong>: Puoi giocare carte di <strong>un seme aggiuntivo</strong> su
+                    questa carta, solo una figura si attiva. Si attivano gli effetti di entrambi i semi <br>
                 </p>
                 <p class="card-description">
                     <strong class="card-active">8 - FORZA</strong>: Raddoppia i punti dell'Arcana Maggiore
                     giocato e i suoi potenziamenti <br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">9 - L'EREMITA</strong>: I bastoni fanno prendere <strong>3</strong>
+                    <strong class="card-passive">9 - L'EREMITA</strong>: I bastoni fanno scartare <strong>3</strong>
                     Arcana Minori casuali dalla mano di un avversario <br>
                 </p>
                 <p class="card-description">
@@ -206,7 +210,7 @@
                     giocate vengono scartate. Gli effetti di qualsiasi carta vengono annullati. <br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">17 - LA STELLA</strong>: I denari fanno pescare 3 Arcana Minori<br>
+                    <strong class="card-passive">17 - LA STELLA</strong>: I denari fanno pescare 2 Arcana Minori<br>
                 </p>
                 <p class="card-description">
                     <strong class="card-passive">18 - LA LUNA</strong>: Quando giochi il seme spade, esse <strong>rimuovono</strong> un punto vittoria
@@ -225,54 +229,87 @@
 
             <div id="text-2" style="display: none;">
                 <p>
-                    <strong class="card-instant">0 MATTO:</strong> peschi un arcano maggiore a fine turno. <br>
-                    <strong class="card-instant">1 MANIPOLAZIONE:</strong> Scegli 3 Arcana Minori dalla mano di un avversario 
-                    (l'avversario rivela la sua mano) <br>
-                    <strong>2 IMMAGINAZIONE:</strong> I gioca (con o senza arcani minori) e, se vinci
-                     il turno, rimetti questa carta nella tua mano e pesca un nuovo arcano maggiore; 
-                     II pesca un arcano minore. Puoi usarlo come un secondo upgrade a questa carta. <br>
-                    <strong>3 CRESCITA:</strong> scarta un arcano minore ed ottieni +10 (cumulabile). <br>
-                    <strong>4 AUTORITÀ:</strong> pesca un arcano maggiore dagli scarti, dimezzane la 
-                    potenza ed usalo come upgrade. <br>
-                    <strong>5 CONOSCENZA:</strong> +4 per ogni arcano minore in mano (mostra la tua mano). <br>
+                    <p class="card-description">
+                        <strong class="card-instant">0 MATTO:</strong> peschi un arcano maggiore a fine turno. <br>
+                    </p>
+
+                    <p class="card-description">
+                        <strong class="card-instant">1 MANIPOLAZIONE:</strong> Scegli 3 Arcana Minori dalla mano di un avversario
+                        (l'avversario rivela la sua mano) <br>
+                    </p>
+
+                    <p class="card-description">
+                        <strong>2 IMMAGINAZIONE:</strong> I gioca (con o senza arcani minori) e, se vinci
+                         il turno, rimetti questa carta nella tua mano e pesca un nuovo arcano maggiore;
+                         II pesca un arcano minore. Puoi usarlo come un secondo upgrade a questa carta. <br>
+                    </p>
+
+                    <p class="card-description">
+                        <strong>3 CRESCITA:</strong> scarta un arcano minore ed ottieni +10 (cumulabile). <br>
+                    </p>
+
+                    <p class="card-description">
+                        <strong>4 AUTORITÀ:</strong> pesca un arcano maggiore dagli scarti, dimezzane la
+                        potenza ed usalo come upgrade. <br>
+                    </p>
+
+                    <p class="card-description">
+                        <strong>5 CONOSCENZA:</strong> +4 per ogni arcano minore in mano (mostra la tua mano). <br>
+                    </p>
+
                     <strong>6 ALIENI:</strong> puoi prendere un qualsiasi arcano maggiore dalla
                      pila degli scarti, dimezzarne la potenza ed usarlo come upgrade. Se vinci
                       il turno, rimetti questa carta nella tua mano e pesca un arcano maggiore. <br>
+
                     <strong>7 VIOLENZA:</strong> in questa sfida, gli effetti degli arcani 
                     maggiori non funzionano. <br>
+
                     <strong>8 DESIDERIO:</strong> può essere migliorato solo dal seme
                      "denari". Lo sfidante può usare solo il seme "libri". <br>
+
                     <strong>9 SOLITUDINE:</strong> scarta una Figura. Se lo fai, a fine turno,
                      questa carta rimane in campo ma puoi usarla come upgrade (+9) per il tuo 
                      prossimo turno. <br>
+
                     <strong>10 CAMBIAMENTO:</strong> cavaliere e fante non possono essere usati.
                      Può essere usato solo il seme "torce". <br>
+
                     <strong>11 COLPA/VERITÀ:</strong> puoi scambiarla con un arcano maggiore nel mazzo. <br>
+
                     <strong>12 SACRIFICIO:</strong> puoi scartare tutti i tuoi arcani minori nella 
                     tua mano. Se lo fai e vinci il round, peschi due arcani maggiori, mentre, 
                     in caso di sconfitta, ne peschi uno solo. <br>
+
                     <strong>13 MORTE:</strong> puoi usare due arcani minori (anche di seme diverso). <br>
+
                     <strong>14 CONTAMINAZIONE:</strong> usa un arcano minore per annullare
                      gli upgrade dell'arcano maggiore avversario o per annullare i suoi effetti. <br>
+
                     <strong>15 CORRUZIONE:</strong> ad inizio e fine round, pesca un arcano
                      minore dal mazzo dell'avversario. <br>
+
                     <strong>16 PECCATI DEGLI AVI:</strong> puoi saltare il turno. Se lo 
                     fai, rimetti questa carta nella tua mano e ne dimezzi la potenza. 
                     Inoltre, scarti un arcano minore (effetto non cumulabile). <br>
+
                     <strong>17 SCIENZA:</strong> può essere solo il seme "ampolle".
                      Il loro potere aumenta di +2 su questa carta. Può essere usato 
                      l'arcano CONOSCENZA (+7). <br>
+
                     <strong>18 FOLLIA:</strong> gioca il round oppure attiva due fra questi 
                     effetti= I scarta tutti gli arcani minori in mano. Vinci il turno in 
                     automatico, rimetti questa carta nella tua mano e non peschi alcun arcano
                      maggiore (effetto non cumulabile); II scarta questa carta e perdi lo scontro. 
                      Il tuo avversario ritira il suo arcano maggiore e non ne pesca altri. 
                      Pesca 5 arcani minori. <br>
+
                     <strong>19 VERGOGNA E DECLINO:</strong> le Figure non funzionano in questo turno.
                      Nella tua prossima sfida non puoi usare arcani minori. <br>
+
                     <strong>20 CAOS:</strong> se usi un Asso, vinci il turno in automatico. Se tale 
                     Asso dovesse essere del seme "denari", rubi l'arcano maggiore usato dall'avversario
                      in questo turno. <br>
+
                     <strong>21 VUOTO:</strong> non si può usare il fante ed il re in questo turno. 
                     Se l'avversario usa l'arcano MATTO con la Figura "Re di denari", questa carta 
                     verrà BANDITA dalla partita. <br>

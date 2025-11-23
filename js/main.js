@@ -71,9 +71,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Functionality for the text-toggle button
 document.getElementById('text-button').addEventListener('click', function(){
-    this.classList.toggle('pressed');
     toggleText();
 })
+
+// Functionality for the theme-togglebutton
+document.getElementById('theme-button').addEventListener('click', function(){
+    this.textContent = (this.textContent == "Light Mode")? "Dark Mode" : "Light Mode"
+    toggleTheme();
+})
+
+
 
 function toggleText(){
     const t1 = document.getElementById('text-1');
@@ -85,4 +92,15 @@ function toggleText(){
     t1.style.display = 'none';
     t2.style.display = 'block';
   }
+}
+
+function toggleTheme(){
+    const body = document.querySelector('body');
+    if(body.classList.contains('light-mode')){
+        body.classList.toggle('light-mode');
+        body.classList.toggle('dark-mode');
+    } else{
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+    }
 }
