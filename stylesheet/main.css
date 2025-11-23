@@ -7,13 +7,13 @@
 
 /* Colors */
 :root{
-    --color-highlight: #b33951;
-    --color-text: #333;
-    --color-active: #395bb9;
-    --color-passive: #9e1495;
-    --color-instant: #b33951;
-    --color-background: #f5f5f5;
-    --color-background-secondary: #f8f9fa;
+    --color-highlight: #be3d30;
+    --color-text: #2b2121;
+    --color-active: #f0e15a;
+    --color-passive: #0fbad1;
+    --color-instant: #be3d30;
+    --color-background: #fff4f3;
+    --color-background-secondary: #f5ebea;
 }
 
 
@@ -26,12 +26,22 @@
   'opsz' 24
 }
 
+/* Google Fonts */
+body{
+  font-family: "Radio Canada Big", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: "Radio Canada Big", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
     color: var(--color-text);
     background-color: var(--color-background);
-    padding-bottom: 80px; /* Space for mobile bottom nav */
 }
 
 .container {
@@ -50,10 +60,18 @@ body {
     margin-top: 4rem; /* margin for the navbar */
 }
 
-.site-title {
+.site-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-title > h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
     font-weight: 700;
+    display: flex;
+    align-self: center;
 }
 
 h1{
@@ -73,28 +91,49 @@ h3{
 }
 
 p{
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 ul{
     list-style-type: none;
 }
 
+li{
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.button-container{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card Effects List */
+.card-description {
+	/* border: 1px solid color-mix(in oklab, var(--color-text) 43%, var(--color-background) 50%); */
+	padding: 0px;
+	margin-bottom: 1rem;
+    margin-top: 1rem;
+}
 .card-instant{
-    padding: 2px;
+    padding: 2px 4px;
     color: var(--color-background);
     background-color: var(--color-instant);
 }
 
 .card-passive{
     padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
     color: var(--color-background);
     background-color: var(--color-passive);
 }
 
 .card-active{
     padding: 2px;
-    color: var(--color-background);
+    color: var(--color-text);
     background-color: var(--color-active);
 }
 
@@ -201,18 +240,19 @@ ul{
 .content-section {
     padding: 0;
     padding-bottom: 4rem;
-    min-height: 100vh;
+    padding-top: 2rem;
+    min-height: 70vh;
     display: block;
 }
 
-.content-section:nth-child(even) {
+.content-section:nth-child(odd) {
     background: var(--color-background-secondary);
 }
 
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem; /* Account for fixed header */
+    scroll-padding-top: 4rem; /* Account for fixed header */
 }
 
 /* ===== TOGGLE TEXT BUTTON ===== */
@@ -263,7 +303,11 @@ html {
     /* Mobile does not have header at the top */
     html {
     scroll-behavior: smooth;
-    scroll-padding-top: 1rem; 
+    scroll-padding-top: 0; 
+    }
+
+    body{
+        padding-bottom: 80px; /* Space for mobile bottom nav */
     }
 
     /* Hide desktop header on mobile */
@@ -289,7 +333,7 @@ html {
     }
     
     .home {
-        margin-top: 1rem;
+        margin-top: 0;
         min-height: calc(100vh - 70px);
     }
     

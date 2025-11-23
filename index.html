@@ -7,7 +7,9 @@
 
     <link rel="stylesheet" href="stylesheet/main.css">
     <!-- Google Fonts -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cards_star,domino_mask,error,fact_check,person_play,sword_rose" />
 </head>
@@ -26,9 +28,11 @@
         </nav>
     </header>
 
-    <section class="home" id="home">
+    <section class="home content-section" id="home">
         <div class="container">
-            <h1 class="site-title">Tarot-Fight</h1>
+            <div class="site-title">
+                <h1>Tarot-Fight</h1>
+            </div>
             <p>Il primo gioco di carte completamente ed interamente <strong>HTL-Experts-Certified.</strong> <br>
                In questo gioco ad ogni round si scontrano potenti campioni, gli Arcana Maggiori. <br>
                Quest'ultimi possono aumentare il loro potere tramite dei potenziamenti, gli Arcana Minori. <br>
@@ -66,7 +70,14 @@
 
             <h3>Schieramento</h3>
             <p>
-                Ogni giocatore posiziona un <strong>Arcana Maggiore</strong> e uno o più <strong>Arcana Minori</strong> dalla sua mano
+                Ogni giocatore posiziona un <strong>Arcana Maggiore</strong> e uno o più 
+                <strong>Arcana Minori</strong> dalla sua mano <br>
+            </p>
+
+            <p>
+                Se un giocatore non ha carte da giocare, gioca carte pescandole dal mazzo. <br>
+                Non ha Arcana Maggiori: pesca <strong>1 carta</strong>. <br>
+                Non ha Arcana Minori: pesca <strong>2 carte</strong>. <br>
             </p>
 
             <h3>Battaglia</h3>
@@ -103,10 +114,8 @@
             </p>
 
             <p>
-                Ogni giocatore pesca <strong>2 Arcana Maggiori</strong> e un numero variabile di Arcana Minori: 
-                <strong>6 - X</strong>. <br> <strong>X</strong> è il numero di punti vittoria conseguiti dal
-                giocatore che sta pescando. Peschi meno carte più punti vittoria hai. <br>
-                Effetti o bonus che permettono di pescare più carte si attivano dopo aver pescato "normalmente".
+                Ogni giocatore pesca <strong>1 Arcana Maggiore</strong>, e tanti Arcana Minoriti quanti ne ha 
+                ne ha giocati nel turno. (Giocando 2 Arcana Minori, pesco 2 Arcana Minori). <br>
             </p>
         
         </div>
@@ -120,58 +129,104 @@
                 Gli effetti degli Arcana Maggiori si dividono in 3 categorie:
                 <ul>
                     <li><strong class="card-instant">Istantanei:</strong> si attivano giocando la carta</li>
-                    <li><strong class="card-active">Attivabili:</strong> si possono attivare se posizionati nei punti vittoria del giocatore</li>
-                    <li><strong class="card-passive">Passivi:</strong> offrono un bonus affinché sono posizionati nei punti vittoria del giocatore</li>
+                    <li><strong class="card-active">Attivabili:</strong> si possono attivare se posizionati nei 
+                    punti vittoria del giocatore</li>
+                    <li><strong class="card-passive">Passivi:</strong> offrono un bonus affinché sono posizionati 
+                    nei punti vittoria del giocatore</li>
                 </ul> 
             </p>
-            <button class="toggle-text-button" id="text-button">Cambia Regole</button>
+            <div class="button-container">
+                <button class="toggle-text-button" id="text-button">Cambia Regole</button>
+            </div>
             <div id="text-1">
-                <p>
-                    <strong  class="card-instant">0 - IL MATTO</strong>: In questo turno, non c'è nessun vincitore. Scegli
-                    un Arcana maggiore dalla tua mano da posizionare come punto vittoria.
+                <p class="card-description">
+                    <strong class="card-instant">0 - IL MATTO</strong>: In questo turno, <strong>non c'è nessun vincitore</strong>.
+                    Scegli un Arcana maggiore dalla tua mano da posizionare come punto vittoria.
                     Se non hai altre carte in mano, prendi una carta dal mazzo <br>
-                    <strong  class="card-instant">1 - IL MAGO</strong>: Pesca 5 POTENZIAMENTI. <br>
-                    <strong  class="card-instant">2 - LA PAPESSA</strong>: Un avversario rivela tutte le sue carte (Arcana
-                    Maggiori & Minori) <br>
-                    <strong class="card-instant">3 - L'IMPERATRICE</strong>: Pesca 2 Arcana Maggiori <br>
-                    <strong class="card-instant">4 - L'IMPERATORE</strong>: Tutti i punti vengono calcolati in MODULO
-                    10 (Si guarda solamente l'ultima cifra; 19 diventa 9) <br>
-                    <strong class="card-instant">5 - L'IEROFANTE</strong>: Se possibile, attiva un ATTIVAZIONE dai punti
-                    vittoria dell'avversario <br>
-                    <strong>6 - GLI AMANTI</strong>: Ehm... uhh... <br>
-                    <strong class="card-instant">7 - IL CARRO</strong>: Puoi giocare DUE semi diversi come potenziamento di
+                </p>
+                <p class="card-description">
+                    <strong class="card-instant">1 - IL MAGO</strong>: Pesca <strong>5</strong> Arcana Minori. <br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-instant">2 - LA PAPESSA</strong>: Un avversario rivela tutte le sue carte (Arcana Maggiori & Minori) <br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-instant">3 - L'IMPERATRICE</strong>: Pesca <strong>2</strong> Arcana Maggiori <br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-instant">4 - L'IMPERATORE</strong>: Tutti i punti vengono calcolati in <strong>MODULO 10</strong> (Si guarda solamente l'ultima cifra; 19 diventa 9) <br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-instant">5 - L'IEROFANTE</strong>: Se possibile, attiva un <strong>attivabile</strong>
+                    dai punti vittoria dell'avversario <br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-instant">6 - GLI AMANTI</strong>: Scambia qualsiasi numero di carte (Arcana Maggiori e Minori)
+                    dalla tua mano con carte casuali dalla mano di un avversario. Un Arcana Maggiore <strong>deve</strong>
+                    essere scambiato con un Arcana Maggiore e viceversa.<br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-instant">7 - IL CARRO</strong>: Puoi giocare <strong>due</strong> semi diversi come potenziamento di
                     questa carta, vengono considerati uguali. Solo una figura si attiva. <br>
                 </p>
-                <p>
-                    <strong class="card-active">8 - FORZA</strong>: Raddoppia i punti dell'arcana maggiore
+                <p class="card-description">
+                    <strong class="card-active">8 - FORZA</strong>: Raddoppia i punti dell'Arcana Maggiore
                     giocato e i suoi potenziamenti <br>
-                    <strong class="card-passive" >9 - L'EREMITA</strong>: <br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-passive">9 - L'EREMITA</strong>: I bastoni fanno prendere <strong>3</strong>
+                    Arcana Minori casuali dalla mano di un avversario <br>
+                </p>
+                <p class="card-description">
                     <strong class="card-instant">10 - RUOTA DELLA FORTUNA</strong>: Rivela la prima carta
-                    dal mazzo degli arcana minori, se il suo seme è TBD, ottieni 2 punti vittoria <br>
-                    <strong class="card-active">11 - GIUSTIZIA</strong>: Per questo turno, tutti gli Arcana Maggiori hanno un valore pari ad <strong>1</strong><br>
-                    <strong class="card-passive">12 - L'IMPICCATO</strong>: <br>
+                    dal mazzo degli Arcana Minori, se il suo seme è <strong>uguale</strong> al seme giocato
+                    con questa carta, ottieni <strong>2 punti vittoria</strong> <br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-active">11 - GIUSTIZIA</strong>: I punti vittoria di ogni giocatore vengono
+                    <strong>azzerati</strong>. Vengono messi nella pila degli scarti <br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-passive">12 - L'IMPICCATO</strong>: Ad ogni turno puoi scartare uno o più
+                    Arcana Maggiori per ottenere <strong>+8 punti</strong><br>
+                </p>
+                <p class="card-description">
                     <strong class="card-active">13 - LA MORTE</strong>: Un avversario scarta tutte le carte
-                     dalla sua mano e perde 2 punti vittoria. Nella fase di rifornimento, può pescare
-                      un solo Arcana Maggiore ed un solo Arcana Minore. <br>
-                    <strong class="card-passive">14 - TEMPERANZA</strong>: Le coppe fanno pescare 1 Arcana Maggiore in più <br>
-                    <strong class="card-passive">15 - IL DIAVOLO</strong>: I pentacoli fanno pescare 3 carte in più (5 carte in totale)<br>
+                    dalla sua mano e perde <strong>2 punti vittoria</strong> <br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-passive">14 - TEMPERANZA</strong>: Le coppe fanno prendere <strong>2</strong> carte
+                    dalla pila degli scarti: <strong>sia Arcana Maggiori che Arcana Minori</strong><br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-passive">15 - IL DIAVOLO</strong>: I tuoi assi valgono <strong>+10</strong><br>
+                </p>
+                <p class="card-description">
                     <strong class="card-active">16 - LA TORRE</strong>: Questo turno viene annullato, tutte le carte
                     giocate vengono scartate. Gli effetti di qualsiasi carta vengono annullati. <br>
                 </p>
-                <p>
-                    <strong class="card-active">17 - LA STELLA</strong>: <br>
-                    <strong class="card-passive">18 - LA LUNA</strong>: le tue spade rimuovono un punto vittoria ad un avversario<br> 
-                    <strong class="card-passive">19 - IL SOLE</strong>: I tuoi assi valgono +10<br>
-                    <strong class="card-active">20 - GIUDIZIO</strong>: rimuovi 2 punti vittoria ad un
-                    avversario, puoi aggiungerne 1 alla tua mano <br>
-                    <strong class="card-passive">21 - IL MONDO</strong>:  <br>
+                <p class="card-description">
+                    <strong class="card-passive">17 - LA STELLA</strong>: I denari fanno pescare 3 Arcana Minori<br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-passive">18 - LA LUNA</strong>: Quando giochi il seme spade, esse <strong>rimuovono</strong> un punto vittoria
+                    ad un avversario<br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-passive">19 - IL SOLE</strong>: Ogni tuo Arcana Maggiore giocato ha <strong>+2</strong> punti<br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-active">20 - GIUDIZIO</strong>: Scambia l'Arcana Maggiore giocato con uno nella pila degli scarti.<br>
+                </p>
+                <p class="card-description">
+                    <strong class="card-passive">21 - IL MONDO</strong>: Nella fase di rifornimento, pesca 1 Arcana Maggiore <strong>in più</strong> <br>
                 </p>
             </div>
 
             <div id="text-2" style="display: none;">
                 <p>
                     <strong class="card-instant">0 MATTO:</strong> peschi un arcano maggiore a fine turno. <br>
-                    <strong class="card-instant">1 MANIPOLAZIONE:</strong> Scegli 3 arcana minori dalla mano di un avversario 
+                    <strong class="card-instant">1 MANIPOLAZIONE:</strong> Scegli 3 Arcana Minori dalla mano di un avversario 
                     (l'avversario rivela la sua mano) <br>
                     <strong>2 IMMAGINAZIONE:</strong> I gioca (con o senza arcani minori) e, se vinci
                      il turno, rimetti questa carta nella tua mano e pesca un nuovo arcano maggiore; 
@@ -186,7 +241,7 @@
                     <strong>7 VIOLENZA:</strong> in questa sfida, gli effetti degli arcani 
                     maggiori non funzionano. <br>
                     <strong>8 DESIDERIO:</strong> può essere migliorato solo dal seme
-                     "pentacoli". Lo sfidante può usare solo il seme "libri". <br>
+                     "denari". Lo sfidante può usare solo il seme "libri". <br>
                     <strong>9 SOLITUDINE:</strong> scarta una Figura. Se lo fai, a fine turno,
                      questa carta rimane in campo ma puoi usarla come upgrade (+9) per il tuo 
                      prossimo turno. <br>
@@ -216,10 +271,10 @@
                     <strong>19 VERGOGNA E DECLINO:</strong> le Figure non funzionano in questo turno.
                      Nella tua prossima sfida non puoi usare arcani minori. <br>
                     <strong>20 CAOS:</strong> se usi un Asso, vinci il turno in automatico. Se tale 
-                    Asso dovesse essere del seme "pentacoli", rubi l'arcano maggiore usato dall'avversario
+                    Asso dovesse essere del seme "denari", rubi l'arcano maggiore usato dall'avversario
                      in questo turno. <br>
                     <strong>21 VUOTO:</strong> non si può usare il fante ed il re in questo turno. 
-                    Se l'avversario usa l'arcano MATTO con la Figura "Re di Pentacoli", questa carta 
+                    Se l'avversario usa l'arcano MATTO con la Figura "Re di denari", questa carta 
                     verrà BANDITA dalla partita. <br>
                 </p> 
             </div>
@@ -238,43 +293,42 @@
             </p>
 
             <h3>Figure</h3>
-            <p>
-                <strong>Re</strong>: Puoi scambiare l'arcana maggiore giocato con uno degli
+            <p class="card-description">
+                <strong class="card-active">Re</strong>: Puoi scambiare l'Arcana Maggiore giocato con uno degli
                 avversari
             </p>
 
-            <p>
-                <strong>Regina:</strong> I POTENZIAMENTI (dell'avversario) non hanno valore. 
-                Gli effetti delle FIGURE avversarie sono nullificate e il CAMPIONE
+            <p class="card-description">
+                <strong class="card-active">Regina:</strong> Gli Arcana Minori (dell'avversario) non hanno valore. 
+                Gli effetti delle <strong>figure</strong> avversarie sono nullificate e il l'Arcana Maggiore
                 (dell'avversario) non può risolvere il suo effetto
             </p>
 
-            <p>
-                <strong>Cavaliere:</strong>
-                Un avversario scarta un Arcana Maggiore dalla propria mano e non ne pesca
+            <p class="card-description">
+                <strong class="card-active">Cavaliere:</strong>
+                Un avversario scarta <strong>1 Arcana Maggiore</strong> dalla propria mano e non ne pesca
                 di nuovi nella fase di rifornimento.
             </p>
 
-            <p>
-                <strong>Fante (Jack):</strong>
-                Puoi scambiare l'arcana maggiore giocato con uno nella tua mano dopo che tutte 
-                le carte sono state rivelate. Si risolvono eventuali effetti dell'arcana 
-                maggiore scambiato.
+            <p class="card-description">
+                <strong class="card-active">Fante (Jack):</strong>
+                Puoi scambiare l'Arcana Maggiore giocato <strong>con uno nella tua mano</strong> dopo che tutte 
+                le carte sono state rivelate. Si risolvono gli effetti del nuovo Arcana 
+                Maggiore.
             </p>
 
             <h3>Semi e Numeri</h3>
             
             <p>
-                <strong>Coppe:</strong> Aggiungi alla tua mano un arcana minore dalla pila
+                <strong>Coppe:</strong> Puoi aggiungere alla tua mano un Arcana Minore dalla pila
                  degli scarti <br>
 
                 <strong>Spade:</strong> Ottieni +2 punti per ogni punto vittoria dell'avversario
                  con più punti vittoria. <br>
 
-                <strong>Bastoni:</strong> Aggiungi alla tua mano un arcana maggiore 
-                dalla pila degli scarti <br>
+                <strong>Bastoni:</strong> Scarta un Arcana Minore Casuale dalla mano di un avversario <br>
 
-                <strong>Pentacoli:</strong> Pesca 2 potenziamenti in più a fine turno <br>
+                <strong>Denari:</strong> Pesca 1 Arcana Minore<br>
             </p>
 
             
@@ -293,7 +347,7 @@
                 <strong>STACKING:</strong> I potenziamenti possono essere giocati assieme se 
                 appartengono allo stesso seme. Se giocate più FIGURE in questo modo, si attivano 
                 gli effetti di una soltanto, ulteriori figure valgono +0 Se giocati uno o più 
-                ASSI in questo modo, valgono +4
+                ASSI in questo modo, valgono entrambi +4
             </p>
         </div>
     </section>
