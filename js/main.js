@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateActiveNav() {
         let current = '';
-        const scrollPos = window.scrollY + 200;
+        const scrollPos = window.scrollY + 100;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
@@ -70,9 +70,24 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Functionality for the text-toggle button
-document.getElementById('text-button').addEventListener('click', function(){
-    toggleText();
-})
+// TO BE RE-ADDED IN THE FUTURE
+// document.getElementById('text-button').addEventListener('click', function(){
+//     toggleText();
+// })
+
+
+// function toggleText(){
+//     const t1 = document.getElementById('text-1');
+//     const t2 = document.getElementById('text-2');
+//     if (t1.style.display === 'none') {
+//     t1.style.display = 'block';
+//     t2.style.display = 'none';
+//   } else {
+//     t1.style.display = 'none';
+//     t2.style.display = 'block';
+//   }
+// }
+
 
 // Functionality for the theme-togglebutton
 document.getElementById('theme-button').addEventListener('click', function(){
@@ -80,19 +95,6 @@ document.getElementById('theme-button').addEventListener('click', function(){
     toggleTheme();
 })
 
-
-
-function toggleText(){
-    const t1 = document.getElementById('text-1');
-    const t2 = document.getElementById('text-2');
-    if (t1.style.display === 'none') {
-    t1.style.display = 'block';
-    t2.style.display = 'none';
-  } else {
-    t1.style.display = 'none';
-    t2.style.display = 'block';
-  }
-}
 
 function toggleTheme(){
     const body = document.querySelector('body');

@@ -7,25 +7,25 @@
 
 /* Colors */
 .light-mode{
-    --color-highlight: #be3d30;
+    --color-highlight: #ec3844;
     --color-text: #2b2121;
-    --color-active: #f0e15a;
-    --color-passive: #0fbad1;
+    --color-active: #ff3441;
+    --color-passive: #2b2121;
     --color-instant: var(--color-highlight);
-    --color-background: #fff4f3;
-    --color-background-secondary: #f5ebea;
+    --color-background: #f7f1e6;
+    --color-background-secondary: #e9e5dd;
     --color-shadow: #cfcfcf;
 }
 
 .dark-mode{
-    --color-highlight: #2cca54;
+    --color-highlight: #edcd5f;
     --color-text: #eee1e1;
-    --color-active: #383463;
-    --color-passive: #f97a3f;
+    --color-active: #5642b5;
+    --color-passive: #7791ea;
     --color-instant: var(--color-highlight);
-    --color-background: #181616;
-    --color-background-secondary: #1a1818;
-    --color-shadow: #202020;
+    --color-background: #13131b;
+    --color-background-secondary: #181822;
+    --color-shadow: rgba(255, 255, 255, 0);
 }
 
 /* Google Icons */
@@ -56,11 +56,6 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
-.container > p + p{
-    margin-top: 2rem;
-}
-
 
 .home{
     padding-bottom: 200px;
@@ -93,8 +88,14 @@ h2{
 
 h3{
     font-size: 1.75rem;
-    padding-top: 2rem;
+    padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+}
+
+h4{
+    font-size: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 0.25rem;
 }
 
 p{
@@ -106,8 +107,8 @@ ul{
 }
 
 li{
-    margin-bottom: 2px;
-    margin-top: 2px;
+    padding: 0.5rem 0rem 0.5rem 1rem;
+    font-size: 1.1em;
 }
 
 .button-container{
@@ -166,14 +167,15 @@ li{
 	margin-bottom: 1rem;
     margin-top: 1rem;
 }
+
 .card-instant{
-    padding: 2px 4px;
+    padding: 2px 3px;
     color: var(--color-background);
     background-color: var(--color-instant);
 }
 
 .card-passive{
-    padding: 2px;
+    padding: 2px 3px;
     padding-left: 4px;
     padding-right: 4px;
     color: var(--color-background);
@@ -181,9 +183,14 @@ li{
 }
 
 .card-active{
-    padding: 2px;
+    padding: 2px 3px;
     color: var(--color-text);
     background-color: var(--color-active);
+}
+
+.container > p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* ===== DESKTOP HEADER ===== */
@@ -220,10 +227,14 @@ li{
     text-decoration: none;
     color: var(--color-text);
     font-weight: 500;
-    transition: color 0.1s ease;
+    transition: transform 0.6s ease-out, opacity 0.4s ease-out
 }
 
 .nav-links a:hover {
+    color: var(--color-highlight);
+}
+
+.nav-links a.active {
     color: var(--color-highlight);
 }
 

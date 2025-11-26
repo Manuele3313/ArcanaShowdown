@@ -59,7 +59,10 @@
                la zona dei punti vittoria, il campo di battaglia e le pile degli scarti dei due mazzi.
             </p>
             <p>
-               Ad ogni round un giocatore ottiene un <strong>punto vittoria</strong>: l'obiettivo del gioco
+               Il turno di gioco si svolge simultaneamente per tutti i giocatori.
+            </p>
+            <p>
+               Ad ogni turno un giocatore ottiene un <strong>punto vittoria</strong>: l'obiettivo del gioco
                è di arrivare a <strong>5 punti vittoria</strong> prima di tutti gli altri!
             </p>
         </div>
@@ -79,9 +82,11 @@
             </p>
 
             <p>
-                Se un giocatore non ha carte da giocare, gioca carte pescandole dal mazzo. <br>
-                Non ha Arcana Maggiori: pesca <strong>1 carta</strong>. <br>
-                Non ha Arcana Minori: pesca <strong>2 carte</strong>. <br>
+                Se un giocatore non ha carte da giocare, pesca carte dal mazzo. <br>
+                <ul>
+                    <li>Non ha Arcana Maggiori: pesca <strong>1 carta</strong>. <br></li>
+                    <li>Non ha Arcana Minori: pesca <strong>2 carte</strong>. <br></li>
+                </ul>
             </p>
 
             <h3>Battaglia</h3>
@@ -108,6 +113,16 @@
             <p>
                 Le carte giocate vengono posizionate nelle rispettive <strong>pile degli scarti</strong>.
             </p>
+
+            <h4>Gli Effetti Attivabili</h4>
+            <p>
+                Gli effetti <strong class="card-active">attivabili</strong> degli Arcana Maggiori, si possono attivare
+                quando quell'Arcana Maggiore è posizionato tra i punti vittoria di un giocatore. <br>
+                Si possono attivare in qualsiasi momento della <strong>battaglia</strong>, ma non nella fase di
+                rifornimento. <br> Quando viene attivato un effetto di questo tipo, si <strong>sposta nella
+                pila degli scarti</strong> la carta attivata, e il punto vittoria viene rimpiazzato da un Arcana
+                Minore dalla mano del giocatore che attiva l'effetto. 
+            </p>
             <h3>Rifornimento</h3>
             <p>
                 Il <strong>vincitore</strong> del round prende la carta con cui ha vinto e la posiziona tra i suoi 
@@ -118,10 +133,23 @@
             </p>
 
             <p>
-                Ogni giocatore pesca <strong>1 Arcana Maggiore</strong>, e tanti Arcana Minoriti quanti ne ha 
-                ne ha giocati nel turno. (Giocando 2 Arcana Minori, pesco 2 Arcana Minori). <br>
+                Se nessun giocatore ha raggiunto 5 punti vittoria, ogni giocatore pesca <strong>tante carte
+                quante ne ha giocate</strong>. <br> Però, ogni giocatore non può avere più di <strong>5 Arcana 
+                Maggiori</strong> e <strong>10 Arcana Minori</strong>
             </p>
-        
+            <h4>Esempi</h4>
+            <p>
+                Ho giocato <strong>3</strong> Arcana Minori, e <strong>1</strong> Arcana Maggiore. Nella 
+                mano ho 8 Arcana Minori e 2 Arcana Maggiori: pesco <strong>2 Arcana Minori</strong>, perché
+                pescandone 3 supererei il limite di 10 carte; pesco <strong>1</strong> Arcana Maggiore.
+            </p>
+            <p>
+                Ho giocato <strong>2</strong> Arcana Minori, e l'Arcana Maggiore <strong class="card-instant">
+                3 - L'imperatrice</strong>, che fa pescare 2 Arcana Maggiori. Nella mano ho 3 Arcana Minori
+                e 3 Arcana Maggiori. Con l'effetto dell'Arcana Maggiore raggiungo <strong>5</strong> Arcana
+                Maggiori nella mano prima della fase di rifornimento. Nella fase di rifornimento <strong>
+                non pesco Arcana Maggiori </strong>, ma pesco 2 Arcana Minori.
+            </p>
         </div>
     </section>
 
@@ -139,20 +167,21 @@
                     nei punti vittoria del giocatore</li>
                 </ul> 
             </p>
-            <div class="button-container">
+            <!-- Separate rulesets to be reworked -->
+            <!-- <div class="button-container">
                 <button class="toggle-text-button" id="text-button">Cambia Regole</button>
-            </div>
+            </div> -->
             <div id="text-1">
                 <p class="card-description">
-                    <strong class="card-instant">0 - IL MATTO</strong>: In questo turno, <strong>non c'è nessun vincitore</strong>.
-                    Scegli un Arcana maggiore dalla tua mano da posizionare come punto vittoria.
-                    Se non hai altre carte in mano, prendi una carta dal mazzo <br>
+                    <strong class="card-instant">0 - IL MATTO</strong>: Questa carta <strong>non può essere annullata.</strong>
+                    In questo turno <strong>non c'è nessun vincitore.</strong> Posiziona questa carta come punto vittoria. 
                 </p>
                 <p class="card-description">
                     <strong class="card-instant">1 - IL MAGO</strong>: Pesca <strong>5</strong> Arcana Minori. <br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-instant">2 - LA PAPESSA</strong>: Un avversario rivela tutte le sue carte (Arcana Maggiori & Minori) <br>
+                    <strong class="card-instant">2 - LA PAPESSA</strong>: Un avversario ti rivela tutte le sue carte (Arcana Maggiori & Minori). 
+                    Scegline 1 da <strong>aggiungere</strong> alla tua mano.<br>
                 </p>
                 <p class="card-description">
                     <strong class="card-instant">3 - L'IMPERATRICE</strong>: Pesca <strong>2</strong> Arcana Maggiori <br>
@@ -165,9 +194,8 @@
                     dai punti vittoria dell'avversario <br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-instant">6 - GLI AMANTI</strong>: Scambia qualsiasi numero di carte (Arcana Maggiori e Minori)
-                    dalla tua mano con carte casuali dalla mano di un avversario. Un Arcana Maggiore <strong>deve</strong>
-                    essere scambiato con un Arcana Maggiore e viceversa.<br>
+                    <strong class="card-instant">6 - GLI AMANTI</strong>: Puoi scegliere un punto vittoria di <strong>
+                    qualsiasi giocatore</strong> (tu incluso) e scambiarlo con una qualsiasi carta nella tua mano.<br>
                 </p>
                 <p class="card-description">
                     <strong class="card-instant">7 - IL CARRO</strong>: Puoi giocare carte di <strong>un seme aggiuntivo</strong> su
@@ -179,16 +207,18 @@
                 </p>
                 <p class="card-description">
                     <strong class="card-passive">9 - L'EREMITA</strong>: I bastoni fanno scartare <strong>3</strong>
-                    Arcana Minori casuali dalla mano di un avversario <br>
+                    Arcana Minori a un avversario <br>
                 </p>
                 <p class="card-description">
                     <strong class="card-instant">10 - RUOTA DELLA FORTUNA</strong>: Rivela la prima carta
                     dal mazzo degli Arcana Minori, se il suo seme è <strong>uguale</strong> al seme giocato
-                    con questa carta, ottieni <strong>2 punti vittoria</strong> <br>
+                    con questa carta, ottieni <strong>2 punti vittoria</strong>. La carta rivelata va
+                    nella pila degli scarti. <br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-active">11 - GIUSTIZIA</strong>: I punti vittoria di ogni giocatore vengono
-                    <strong>azzerati</strong>. Vengono messi nella pila degli scarti <br>
+                    <strong class="card-active">11 - GIUSTIZIA</strong>: In questo turno, tutti gli <strong>Arcana
+                    Minori</strong> non hanno nessun valore e le <strong>figure</strong> non risolvono i loro
+                    effetti <br>
                 </p>
                 <p class="card-description">
                     <strong class="card-passive">12 - L'IMPICCATO</strong>: Ad ogni turno puoi scartare uno o più
@@ -196,7 +226,8 @@
                 </p>
                 <p class="card-description">
                     <strong class="card-active">13 - LA MORTE</strong>: Un avversario scarta tutte le carte
-                    dalla sua mano e perde <strong>2 punti vittoria</strong> <br>
+                    dalla sua mano e perde <strong>2 punti vittoria</strong>. L'avversario pesca <strong>5</strong>
+                    Arcana Minori, <strong>3</strong> Arcana maggiori e <strong>salta la fase di rifornimento.</strong> <br>
                 </p>
                 <p class="card-description">
                     <strong class="card-passive">14 - TEMPERANZA</strong>: Le coppe fanno prendere <strong>2</strong> carte
@@ -206,15 +237,15 @@
                     <strong class="card-passive">15 - IL DIAVOLO</strong>: I tuoi assi valgono <strong>+10</strong><br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-active">16 - LA TORRE</strong>: Questo turno viene annullato, tutte le carte
-                    giocate vengono scartate. Gli effetti di qualsiasi carta vengono annullati. <br>
+                    <strong class="card-active">16 - LA TORRE</strong>: Questo turno viene annullato: <strong>non c'è 
+                    nessun vincitore.</strong> Tutte le carte giocate vengono scartate.<br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">17 - LA STELLA</strong>: I denari fanno pescare 2 Arcana Minori<br>
+                    <strong class="card-passive">17 - LA STELLA</strong>: I Denari fanno pescare 3 Arcana Minori<br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">18 - LA LUNA</strong>: Quando giochi il seme spade, esse <strong>rimuovono</strong> un punto vittoria
-                    ad un avversario<br>
+                    <strong class="card-active">18 - LA LUNA</strong>: Quando giochi il seme Spade, <strong>sposta</strong> 
+                    un punto vittoria di un avversario nella pila degli scarti<br>
                 </p>
                 <p class="card-description">
                     <strong class="card-passive">19 - IL SOLE</strong>: Ogni tuo Arcana Maggiore giocato ha <strong>+2</strong> punti<br>
@@ -223,7 +254,9 @@
                     <strong class="card-active">20 - GIUDIZIO</strong>: Scambia l'Arcana Maggiore giocato con uno nella pila degli scarti.<br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">21 - IL MONDO</strong>: Nella fase di rifornimento, pesca 1 Arcana Maggiore <strong>in più</strong> <br>
+                    <strong class="card-passive">21 - IL MONDO</strong>: Se possiedi <strong>3 punti vittoria</strong> (compresa questa carta),
+                    nella fase di <strong>rifornimento</strong> peschi <strong>1 Arcana Maggiore</strong> e <strong>2 Arcana Minori</strong>
+                     aggiuntivi <br>
                 </p>
             </div>
 
@@ -257,15 +290,21 @@
                         <strong>5 CONOSCENZA:</strong> +4 per ogni arcano minore in mano (mostra la tua mano). <br>
                     </p>
 
-                    <strong>6 ALIENI:</strong> puoi prendere un qualsiasi arcano maggiore dalla
-                     pila degli scarti, dimezzarne la potenza ed usarlo come upgrade. Se vinci
-                      il turno, rimetti questa carta nella tua mano e pesca un arcano maggiore. <br>
+                    <p class="card-description">
+                        <strong>6 ALIENI:</strong> puoi prendere un qualsiasi arcano maggiore dalla
+                         pila degli scarti, dimezzarne la potenza ed usarlo come upgrade. Se vinci
+                          il turno, rimetti questa carta nella tua mano e pesca un arcano maggiore. <br>
+                    </p>
 
-                    <strong>7 VIOLENZA:</strong> in questa sfida, gli effetti degli arcani 
-                    maggiori non funzionano. <br>
+                    <p class="card-description">
+                        <strong>7 VIOLENZA:</strong> in questa sfida, gli effetti degli arcani
+                        maggiori non funzionano. <br>
+                    </p>
 
-                    <strong>8 DESIDERIO:</strong> può essere migliorato solo dal seme
-                     "denari". Lo sfidante può usare solo il seme "libri". <br>
+                    <p class="card-description">
+                        <strong>8 DESIDERIO:</strong> può essere migliorato solo dal seme
+                         "denari". Lo sfidante può usare solo il seme "libri". <br>
+                    </p>
 
                     <strong>9 SOLITUDINE:</strong> scarta una Figura. Se lo fai, a fine turno,
                      questa carta rimane in campo ma puoi usarla come upgrade (+9) per il tuo 
@@ -331,60 +370,57 @@
 
             <h3>Figure</h3>
             <p class="card-description">
-                <strong class="card-active">Re</strong>: Puoi scambiare l'Arcana Maggiore giocato con uno degli
+                <strong class="card-instant">Re</strong>: Puoi scambiare l'Arcana Maggiore giocato con uno degli
                 avversari
             </p>
 
             <p class="card-description">
-                <strong class="card-active">Regina:</strong> Gli Arcana Minori (dell'avversario) non hanno valore. 
-                Gli effetti delle <strong>figure</strong> avversarie sono nullificate e il l'Arcana Maggiore
-                (dell'avversario) non può risolvere il suo effetto
+                <strong class="card-instant">Regina:</strong> Nullifica gli effetti delle <strong>figure</strong>
+                e <strong>Arcana Maggiori</strong> dei giocatori con un <strong>punteggio</strong> minore del
+                giocatore che ha giocato la regina.
             </p>
 
             <p class="card-description">
-                <strong class="card-active">Cavaliere:</strong>
-                Un avversario scarta <strong>1 Arcana Maggiore</strong> dalla propria mano e non ne pesca
-                di nuovi nella fase di rifornimento.
+                <strong class="card-instant">Cavaliere:</strong>
+                Un avversario scarta <strong>1 Arcana Maggiore</strong> dalla propria mano, ne pesca 
+                immediatamente uno dal mazzo
             </p>
 
             <p class="card-description">
-                <strong class="card-active">Fante (Jack):</strong>
-                Puoi scambiare l'Arcana Maggiore giocato <strong>con uno nella tua mano</strong> dopo che tutte 
-                le carte sono state rivelate. Si risolvono gli effetti del nuovo Arcana 
-                Maggiore.
+                <strong class="card-instant">Fante (Jack):</strong>
+                Puoi scambiare l'Arcana Maggiore giocato <strong>con uno nella tua mano</strong>. 
+                Si risolvono gli effetti del nuovo Arcana Maggiore.
             </p>
 
-            <h3>Semi e Numeri</h3>
-            
+            <h3>Semi</h3>
+            <ul>
+                <li><strong>Coppe:</strong> Puoi aggiungere alla tua mano un Arcana Minore
+                dalla pila degli scarti <br></li>
+                <li><strong>Spade:</strong> Ottieni +2 punti per ogni punto vittoria dell'avversario
+                        con più punti vittoria. <br></li>
+                <li><strong>Bastoni:</strong> Un avversario deve scartare 1 Arcana Minore <br></li>
+                <li><strong>Denari:</strong> Pesca 1 Arcana Minore</li>
+            </ul>
+
+            <h3>Numeri</h3>
             <p>
-                <strong>Coppe:</strong> Puoi aggiungere alla tua mano un Arcana Minore dalla pila
-                 degli scarti <br>
-
-                <strong>Spade:</strong> Ottieni +2 punti per ogni punto vittoria dell'avversario
-                 con più punti vittoria. <br>
-
-                <strong>Bastoni:</strong> Scarta un Arcana Minore Casuale dalla mano di un avversario <br>
-
-                <strong>Denari:</strong> Pesca 1 Arcana Minore<br>
-            </p>
-
-            
-            <p>
-                <strong>Asso:</strong>
+                <strong class="card-instant">Asso:</strong>
                 +4 punti
             </p>
 
 
             <p>
-                <strong>Carta numerata:</strong>
+                <strong class="card-instant">Carta numerata:</strong>
                 +2 punti
             </p>
 
             <p>
-                <strong>STACKING:</strong> I potenziamenti possono essere giocati assieme se 
-                appartengono allo stesso seme. Se giocate più FIGURE in questo modo, si attivano 
-                gli effetti di una soltanto, ulteriori figure valgono +0 Se giocati uno o più 
-                ASSI in questo modo, valgono entrambi +4
+                <strong class="card-instant">Stacking:</strong> I potenziamenti possono essere giocati 
+                <strong>assieme</strong> se appartengono allo <strong>stesso seme</strong> ed i loro
+                punteggi vengono <strong>sommati</strong>. 
+                Se giocate più FIGURE in questo modo, si attivano 
+                gli effetti di <strong>una soltanto</strong>, ulteriori figure valgono +0 Se giocati
+                uno o più Assi in questo modo, valgono entrambi <strong>+4</strong>
             </p>
         </div>
     </section>
@@ -392,8 +428,49 @@
     <section id="section5" class="content-section">
         <div class="container">
             <h2>Ambiguità</h2>
+            <h3>Massime Carte nella mano</h3>
             <p>
-                Ulteriori chiarificazioni delle regole andranno qui.
+                Ogni volta che un giocatore pesca delle carte per qualsiasi effetto (semi, 
+                istantaneo o fase di rifornimento), il giocatore non può superare 
+                il limite di carte nella mano: <br>
+            </p>
+                <ul>
+                    <li>Arcana Maggiori: massimo <strong>5</strong></li>
+                    <li>Arcana Minori: massimo <strong>10</strong>.</li><br>
+                </ul>
+
+            <p>
+                Se pescando una carta un giocatore dovesse superare questi limiti,
+                allora l'effetto non può risolversi e il giocatore non pescherà nessuna carta.
+            </p>
+            
+
+            <h3>Carro</h3>
+            <p>
+                L'effetto del carro si attiva ancora prima che venga rivelato.
+                Se viene scambiato con un altro Arcana Maggiore, questo può
+                usufruire di entrambi i semi giocati con il Carro.
+            </p>
+
+            <h3>Fante</h3>
+            <p>
+                Il fante può essere utilizzato in molti modi.
+                Ad esempio, si può utilizzare giocando normalmente, 
+                ma, in caso di una sconfitta imminente si può scambiare 
+                l'Arcana Maggiore giocato con un istantaneo. 
+                Mantenendo l'Arcana Maggiore in mano e attivando l'effetto istantaneo.
+
+            </p>
+
+            <h3>Fante e Il Matto</h3>
+            <p>
+                Se si gioca il Matto con il Fante, questo permette di scambiare il matto
+                con un'altro Arcana Maggiore.
+                Il nuovo Arcana Maggiore verrà scartato alla fine del turno, ma attivando 
+                i suoi effetti istantanei: Quando il Matto è giocato, 
+                <strong>deve andare nei punti vittoria</strong> del giocatore. <br>
+                Nel caso la carta giocata sia un'altra e Il Matto viene giocato
+                tramite il Fante, si attiva comunque l'effetto del Matto.
             </p>
         </div>
     </section>
