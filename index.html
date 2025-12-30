@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcana Showdown</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+    <link rel="manifest" href="/images/site.webmanifest" />
     <link rel="stylesheet" href="stylesheet/main.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,10 +98,9 @@
 
             <h3>Schieramento</h3>
             <p>
-                Ogni giocatore posiziona a faccia in giù solo un Arcana Maggiore e 
-                <strong>zero o più</strong> Arcana Minori dalla sua mano. <br>
-                Gli Arcana Minori si possono utilizzare in due modi: come <strong>Potenziamento</strong>
-                oppure come <strong>Token</strong>.
+                Un giocatore posiziona a faccia in giù solo un Arcana Maggiore e
+                <strong>2</strong> Arcana Minori dalla sua mano. <br>
+                Ogni Arcana Minore deve essere posizionato <strong>nella colonna del suo seme</strong>.
             </p>
             <p>
                 Se un giocatore non ha carte da giocare, pesca dai rispettivi mazzi. <br>
@@ -105,19 +110,11 @@
                     <li>Non ha Arcana Minori: pesca <strong>3 carte</strong>. <br></li>
                 </ul>
             
-            <h4>Potenziamenti</h4>
             <p>
-                I potenziamenti servono ad aumentare il proprio <strong>punteggio</strong> e 
-                attivare <strong>figure</strong> e gli effetti del <strong>seme</strong> giocato.
-                <br> Tutti i potenziamenti giocati <strong>devono avere lo sesso seme</strong>.
-            </p>
-            <h4>Token</h4>
-            <p>
-                Gli Arcana Minori posizionati come Token non aumentano il proprio punteggio,
-                ma <strong>non c'è nessun vincolo</strong> sul seme da giocare: ogni Arcana Minore 
-                può essere giocato come Token. <br>
-                Alcuni Arcana Minori hanno effetti che si attivano solamente se posizionati come 
-                Token.
+                Dopo che un giocatore ha finito la fase di schieramento, passa il turno al giocatore successivo,
+                che eseguirà la sua fase di schieramento.
+                Quando <strong>tutti i giocatori</strong> hanno effettuato la fase di schieramento, <strong>
+                inizia la fase di battaglia. </strong>
             </p>
 
             <h3>Battaglia</h3>
@@ -125,19 +122,25 @@
                 Si scoprono le carte giocate, ed inizia la battaglia. Ogni giocatore svolge il proprio
                 turno, in cui:
             </p>
-            <ul>
-                <li>Si attivano gli effetti degli <strong>Arcana Minori</strong> giocati:
-                sia potenziamenti che token</li>
+            <ol>
+                <li>Sceglie una colonna di Arcana Minori. Questa è considerata <strong>giocata</strong>
+                e non è più nel campo</li>
                 <li>Si attiva l'effetto <strong class="card-instant">istantaneo</strong>
                 dell'Arcana Maggiore che ha giocato</li>
-                <li>Può utilizzare l'effetto di un <strong class="card-active">attivabile</strong>
+                <li>Si attivano tutti gli effetti degli Arcana Minori</li>
+            </ol>
+            <p>
+                L'ordine in cui si svolgono queste azioni è determinato dal giocatore. <br>
+            </p>
+            <p>
+                Inoltre, in qualsiasi momento del turno il giocatore può:
+            </p>
+            <ul>
+                <li>Utilizzare l'effetto di un <strong class="card-active">attivabile</strong>
                 posizionato nei suoi punti vittoria </li>
-                <li>Usufruisce di effetti <strong class="card-passive">passivi</strong> delle carte
+                <li>Usufruire di effetti <strong class="card-passive">passivi</strong> delle carte
                 posizionate nei suoi punti vittoria</li>
             </ul>
-            <p>
-                L'ordine in cui si svolgono queste azioni è determinato dal giocatore.
-            </p>
                 
             <h4>Ordine dei turni</h4>
             <p>
@@ -174,26 +177,32 @@
                 In caso di <strong>pareggio</strong> non c'è nessun vincitore.
             </p>
             <p>
-                Le carte giocate vengono posizionate nelle rispettive <strong>pile degli scarti</strong>.
+                Le carte giocate sono poste nelle rispettive <strong>pile degli scarti</strong>.
             </p>
             <h3>Rifornimento</h3>
             <p>
-                Se nessun giocatore ha raggiunto 5 punti vittoria, ogni giocatore pesca <strong>tante carte
-                quante ne ha giocate</strong>. <br> Però, ogni giocatore non può avere più di <strong>5 Arcana 
-                Maggiori</strong> e <strong>10 Arcana Minori</strong> in mano.
+               Se nessun giocatore ha vinto la partita, ogni giocatore pesca fino ad arrivare a:
             </p>
+                <ul>
+                    <li><strong>3</strong> Arcana Maggiori nella sua mano</li>
+                    <li><strong>6</strong> Arcana Minori nella sua mano</li>
+                </ul>
+            <p>
+               Se un giocatore ha superato il limite per un tipo di carta, non pescherà nessuna carta di quel tipo
+            </p>
+
             <h4>Esempi</h4>
             <p>
-                Ho giocato <strong>3</strong> Arcana Minori, e <strong>1</strong> Arcana Maggiore. Nella 
-                mano ho 8 Arcana Minori e 2 Arcana Maggiori: pesco <strong>2 Arcana Minori</strong>, perché
-                pescandone 3 supererei il limite di 10 carte; pesco <strong>1</strong> Arcana Maggiore.
+                Gioco <strong>1</strong> Arcana Maggiore. Ho
+                4 Arcana Minori e 2 Arcana Maggiori in mano: pesco <strong>2 Arcana Minori</strong> e 
+                <strong>1</strong> Arcana Maggiore.
             </p>
             <p>
-                Ho giocato <strong>2</strong> Arcana Minori, e l'Arcana Maggiore <strong class="card-instant">
-                3 - L'IMPERATRICE</strong>, che fa pescare 2 Arcana Maggiori. Nella mano ho 3 Arcana Minori
+                Gioco l'Arcana Maggiore <strong class="card-instant">
+                3 - L'IMPERATRICE</strong>, che fa pescare 3 Arcana Maggiori. Nella mano ho 3 Arcana Minori
                 e 3 Arcana Maggiori. Con l'effetto dell'Arcana Maggiore raggiungo <strong>5</strong> Arcana
                 Maggiori nella mano prima della fase di rifornimento. Nella fase di rifornimento <strong>
-                non pesco Arcana Maggiori </strong>, ma pesco 2 Arcana Minori.
+                non pesco Arcana Maggiori </strong> ma pesco 3 Arcana Minori.
             </p>
         </div>
     </section>
@@ -218,13 +227,13 @@
                     <strong>battaglia</strong>. <br>
                     Per attivare un attivabile, questo deve trovarsi nella zona dei punti vittoria del giocatore; 
                     quando viene attivato, si mette nella pila degli scarti degli Arcana Maggiori e al suo posto 
-                    il giocatore deve posizionare a faccia in giù un Arcana Minore dalla sua mano per sostituirlo. 
+                    il giocatore deve posizionare a faccia in giù un Arcana Minore dal mazzo per sostituirlo. 
                 </p>
                 <h4><strong class="card-passive">Passivi</strong></h4>
                 <p>
                     Il tipo più sottovalutato.<br>
-                    Gli Arcana Maggiori passivi offrono effetti passivi, attivi durante qualsiasi fase di gioco. <br>
-                    Per usufruire dell'effetto di un Arcana Maggiore passivo, è necessario aver posizionato nei punti 
+                    Gli Arcana Maggiori passivi offrono effetti passivi, in effetto durante qualsiasi fase di gioco. <br>
+                    Per usufruire dell'effetto di un Arcana Maggiore passivo, è necessario averlo posizionato nei punti 
                     vittoria. <br>
                     Solo il giocatore che lo ha nella zona dei punti vittoria può usufruire del suo effetto.
                 </p>
@@ -236,96 +245,93 @@
             <h3>Gli effetti delle carte</h4>
             <div id="text-1">
                 <p class="card-description">
-                    <strong class="card-instant">0 - IL MATTO</strong>: Questa carta <strong>non può essere annullata.</strong>
+                    <strong class="card-instant">0 - IL MATTO</strong>: 
                     In questo turno <strong>non c'è nessun vincitore.</strong> Posiziona questa carta come punto vittoria
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">1 - IL MAGO</strong>: In ogni turno, <strong>copia</strong> l'effetto di una carta 
-                    a tua scelta nei tuoi punti vittoria 
+                    <strong class="card-instant">1 - IL MAGO</strong>: Rivela <strong>3 carte</strong> dal mazzo degli Arcana Minori e posizionale 
+                    nel tuo campo
                 </p>
                 <p class="card-description">
-                    <strong class="card-instant">2 - LA PAPESSA</strong>: Un avversario ti mostra tutte le sue carte 
-                    nella sua mano (Arcana Maggiori & Minori). 
-                    Scegline 1 da <strong>aggiungere</strong> alla tua mano
+                    <strong class="card-instant">2 - LA PAPESSA</strong>: Un avversario ti mostra tutti gli Arcana Maggiori nella sua mano.
+                    Puoi <strong>aggiungerne 1</strong> alla tua mano
                 </p>
                 <p class="card-description">
-                    <strong class="card-instant">3 - L'IMPERATRICE</strong>: Pesca <strong>2</strong> Arcana Maggiori 
+                    <strong class="card-instant">3 - L'IMPERATRICE</strong>: Pesca <strong>3</strong> Arcana Maggiori 
                 </p>
                 <p class="card-description">
                     <strong class="card-instant">4 - L'IMPERATORE</strong>: Il punteggio è calcolato guardando <strong>
                     solamente l'ultima cifra</strong> del punteggio effettivo (17 diventa 7, 8 rimane 8, 10 diventa 0)
                 </p>
                 <p class="card-description">
-                    <strong class="card-instant">5 - L'IEROFANTE</strong>: Se possibile, attiva un <strong>attivabile</strong>
-                    dai punti vittoria dell'avversario come se fosse tuo, senza utilizzare l'Arcana Minore dalla tua mano,
-                    ma pescandolo dal mazzo
+                    <strong class="card-instant">5 - L'IEROFANTE</strong>: <strong>Scegli</strong> un seme (anche quello giocato)
+                    tra gli Arcana Minori nel campo dell'avversario: tutti gli Arcana Minori di quel seme <strong>vanno nella mano 
+                    dell'avversario</strong> e <strong>non attivano</strong>  i loro effetti
                 </p>
                 <p class="card-description">
-                    <strong class="card-instant">6 - GLI AMANTI</strong>: Puoi scegliere qualsiasi carta posizionata nei
-                    punti vittoria di <strong>qualsiasi giocatore</strong> (tu incluso) e scambiarla con una qualsiasi 
-                    carta nella tua mano
+                    <strong class="card-instant">6 - GLI AMANTI</strong>: <strong>Scambia</strong> questa carta con un Arcana Maggiore
+                    nei punti vittoria <strong>di qualsiasi giocatore</strong> (tu incluso)
                 </p>
                 <p class="card-description">
-                    <strong class="card-instant">7 - IL CARRO</strong>: Puoi utilizzare Arcana Minori di <strong>due 
-                    semi diversi</strong> su questa carta, solo una figura si attiva. Si attivano gli effetti di entrambi i semi 
+                    <strong class="card-instant">7 - IL CARRO</strong>: Puoi scegliere un <strong>seme aggiuntivo</strong> da giocare
                 </p>
                 <p class="card-description">
                     <strong class="card-active">8 - FORZA</strong>: <strong>Raddoppia</strong> il tuo punteggio
                 </p>
                 <p class="card-description">
                     <strong class="card-passive">9 - L'EREMITA</strong>: L'effetto dei Bastoni diventa: "Ottieni <strong>2</strong> 
-                    punti per ogni Potenziamento nel campo dell'avversario con più Potenziamenti"
+                    punti per ogni Potenziamento <strong>giocato</strong> dall'avversario con più potenziamenti giocati"
                 </p>
                 <p class="card-description">
                     <strong class="card-instant">10 - RUOTA DELLA FORTUNA</strong>: Rivela la prima carta
                     dal mazzo degli Arcana Minori, se il suo seme è <strong>uguale</strong> al seme giocato
                     con questa carta, ottieni <strong>2 punti vittoria</strong> pescandoli dal mazzo degli Arcana Minori. 
-                    Questa carta <strong>non può</strong> essere posizionata nei punti vittoria.
                 </p>
                 <p class="card-description">
-                    <strong class="card-active">11 - GIUSTIZIA</strong>: In questo turno, tutti gli <strong>Arcana
-                    Minori</strong> non hanno valore: i Token non attivano i propri effetti, i Potenziamenti non aumentano 
-                    il punteggio e non attivano i propri effetti
+                    <strong class="card-instant">11 - GIUSTIZIA</strong>: Se possiedi <strong>meno punti vittoria</strong> di un avversario,
+                    allora in questo turno <strong>non c'è nessun vincitore.</strong> Posiziona questa carta come punto vittoria
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">12 - L'IMPICCATO</strong>: In ogni turno, puoi scartare dalla tua mano
-                    un Arcana Maggiore per ottenere <strong>4 punti</strong> o un Arcana Minore per ottenere <strong>2 punti</strong>. 
-                    Questo effetto è <strong>cumulabile</strong>.
+                    <strong class="card-passive">12 - L'IMPICCATO</strong>: Scarta
+                    un Arcana Maggiore dalla tua mano per ottenere <strong>4 punti</strong> oppure un Arcana Minore dal tuo
+                    campo per ottenere <strong>2 punti</strong>. <br>
+                    Questo effetto è <strong>cumulabile</strong>. <br> Se hai scartato un Arcana Maggiore con questo effetto, <strong>
+                    non puoi pescare Arcana Maggiori durante la fase di rifornimento</strong>
                 </p>
                 <p class="card-description">
                     <strong class="card-active">13 - LA MORTE</strong>: Un avversario scarta tutte le carte
-                    dalla sua mano, perde <strong>2 punti vittoria</strong>, pesca <strong>6</strong>
-                    Arcana Minori e <strong>3</strong> Arcana maggiori. L'avversario salta la fase di rifornimento
+                    dalla sua mano e perde <strong>1 punto vittoria</strong>
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">14 - TEMPERANZA</strong>: L'effetto delle Coppe diventa: "Pesca
-                    <strong>2</strong> carte da qualsiasi pila degli scarti: <strong>sia degli Arcana Maggiori che Arcana Minori</strong>"
+                    <strong class="card-passive">14 - TEMPERANZA</strong>: L'effetto delle <strong>Coppe</strong> diventa: "Aggiungi dalla pila degli scarti
+                    alla tua mano <strong>1 Arcana Maggiore</strong> oppure <strong>2 Arcana Minori</strong>"
                 </p>
                 <p class="card-description">
                     <strong class="card-passive">15 - IL DIAVOLO</strong>: I tuoi assi valgono <strong>10</strong> punti
                 </p>
                 <p class="card-description">
-                    <strong class="card-active">16 - LA TORRE</strong>: Si passa immediatamente alla fase di 
-                    <strong>rifornimento</strong>, in questo turno <strong>non c'è nessun vincitore</strong> 
+                    <strong class="card-active">16 - LA TORRE</strong>: Tutte le carte nel campo di <strong>ogni giocatore</strong>
+                    vengono scartate. In questo turno <strong>non c'è nessun vincitore</strong> 
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">17 - LA STELLA</strong>: L'effetto dei Denari diventa: "Pesca 3 Arcana Minori"
+                    <strong class="card-active">17 - LA STELLA</strong>: Se hai giocato il seme Denari, posiziona <strong>tutte</strong> gli Arcana 
+                    Minori nella tua mano sul tuo campo
                 </p>
                 <p class="card-description">
                     <strong class="card-active">18 - LA LUNA</strong>: Se hai giocato il seme Spade, metti
                     una carta nella zona dei punti vittoria di un avversario <strong>nella pila degli scarti</strong>
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">19 - IL SOLE</strong>: Gli effetti dei <strong>Token</strong> si attivano una volta in più
+                    <strong class="card-passive">19 - IL SOLE</strong>: Ottieni <strong>2 punti</strong> per <strong>ogni seme</strong> posizionato
+                    sul tuo campo. Il seme giocato non conta
                 </p>
                 <p class="card-description">
                     <strong class="card-active">20 - GIUDIZIO</strong>: Scambia l'Arcana Maggiore giocato con uno nella pila degli scarti 
-                    degli Arcana Maggiori.
+                    degli Arcana Maggiori
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">21 - IL MONDO</strong>: Se possiedi <strong>3 carte</strong> (compresa questa carta) 
-                    nella zona dei punti vittoria, nella fase di <strong>rifornimento</strong> peschi 
-                    <strong>1 Arcana Maggiore</strong> e <strong>2 Arcana Minori</strong> aggiuntivi 
+                    <strong class="card-active">21 - IL MONDO</strong>: Se hai posizionato <strong>3 Semi diversi</strong> nel tuo campo, ottieni
+                    <strong>10 punti</strong>
                 </p>
             </div>
 
@@ -446,19 +452,18 @@
             </p>
             <h4>Figure</h4>
             <p class="card-description">
-                <strong class="card-instant">Re</strong>: <strong>Raddoppia</strong> il punteggio degli Arcana Minori. 
-                Esempio: giocando due carte numerate il loro punteggio passa da <strong>4</strong> a <strong>8</strong>
+                <strong class="card-instant">Re</strong>: <strong>Raddoppia</strong> i punti degli Arcana Minori 
+                con lo stesso seme di questa carta
             </p>
 
             <p class="card-description">
-                <strong class="card-instant">Regina</strong>: In questo turno, <strong>nessun giocatore</strong> può attivare effetti 
-                <strong class="card-active">attivabili</strong> e gli effetti <strong class="card-passive">passivi</strong>
-                sono nullificati
+                <strong class="card-instant">Regina</strong>: Prendi una carta dal campo <strong>di ogni avversario</strong> e 
+                posizionala nel tuo campo
             </p>
 
             <p class="card-description">
                 <strong class="card-instant">Cavaliere</strong>:
-                Ottieni <strong>2 punti</strong> per ogni Arcana Minore che hai posizionato come <strong>Token</strong>
+                Attiva l'effetto di un attivabile <strong>senza scartarlo</strong>
             </p>
 
             <p class="card-description">
@@ -478,9 +483,9 @@
                 dalla pila degli scarti <br></li>
                 <li><strong>Spade:</strong> Ottieni <strong>2 punti</strong> per ogni carta nella zona dei 
                     punti vittoria dell'avversario con più carte in questa zona <br></li>
-                <li><strong>Bastoni:</strong> Ottieni <strong>1 punto</strong> per ogni Arcana Minore nel campo
-                     dell'avversario con più Arcana Minori<br></li>
-                <li><strong>Denari:</strong> Pesca <strong>1 Arcana Minore</strong></li>
+                <li><strong>Bastoni:</strong> Ottieni <strong>1 punto</strong> per ogni Potenziamento nel campo
+                     dell'avversario con più Potenziamenti<br></li>
+                <li><strong>Denari:</strong> Pesca <strong>1 Arcana Minore</strong> e posizionalo nel tuo campo</li>
             </ul>
 
             <h4>Numeri</h4>
@@ -507,27 +512,13 @@
     <section id="section5" class="content-section">
         <div class="container">
             <h2>Ambiguità</h2>
-            <h3>Massime Carte nella mano</h3>
-            <p>
-                Ogni volta che un giocatore pesca delle carte per qualsiasi effetto (semi, 
-                istantaneo o fase di rifornimento), il giocatore non può superare 
-                il limite di carte nella mano: <br>
-            </p>
-            <ul>
-                <li>Arcana Maggiori: massimo <strong>5</strong></li>
-                <li>Arcana Minori: massimo <strong>10</strong></li>
-            </ul>
-            <p>
-                Se pescando una carta un giocatore dovesse superare questi limiti,
-                allora l'effetto è annullato e il giocatore non pescherà nessuna carta.
-            </p>
-            
 
             <h3>Carro</h3>
             <p>
-                L'effetto del carro si attiva ancor prima che venga rivelato.
-                Se viene scambiato con un altro Arcana Maggiore, questo può
-                usufruire di entrambi i semi giocati con il Carro.
+                L'effetto del farro fa giocare un seme aggiuntivo.
+                Se il Carro viene scambiato con un altro Arcana Maggiore, il seme aggiuntivo
+                continua ad essere <strong>giocato</strong>, quindi il nuovo Arcana Maggiore 
+                può utilizzare entrambi i semi giocati; solo <strong>una figura si attiva</strong>.
             </p>
 
             <h3>Fante</h3>

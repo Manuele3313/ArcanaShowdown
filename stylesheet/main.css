@@ -98,6 +98,15 @@ ul{
     padding-bottom: 1rem;
 }
 
+ol{
+    padding-left: 32px;
+    padding-bottom: 1rem;
+}
+
+ol li{
+    text-indent: -2%;
+}
+
 li{
     padding: 0.5rem 0rem 0.5rem 1rem;
     font-size: 1.1em;
