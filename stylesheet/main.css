@@ -218,9 +218,7 @@ li{
 .effect-list .card-tag{
     font-weight: 800;
     text-align: center;
-    letter-spacing: 0;
-    font-size: 1.4rem;
-    text-transform: none;
+    font-size: 1.2rem;
 }
 
 .effect-list li{
@@ -240,6 +238,22 @@ li{
 
 .card-list li{
     text-indent: 0%;
+}
+
+/* Variations to account for long card effects */
+
+.card-list.major{
+    grid-auto-flow: row dense;
+}
+
+.card-list.major li:nth-child(13){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.card-list.major li:nth-child(15){
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .card-item {
@@ -284,6 +298,7 @@ li{
     text-align: center;
     letter-spacing: 0.6px;
 }
+
 
 /* Variations for the Minor Arcana list */
 
