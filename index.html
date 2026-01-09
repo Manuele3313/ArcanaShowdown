@@ -68,6 +68,7 @@
             </p>
             <h2>Obiettivo del gioco</h2>
             <p>
+                Dopo ogni Battaglia, un giocatore posizionerà una carta nel proprio Pantheon. <br>
                 Per vincere, devi accumulare più carte nel tuo <strong>Pantheon</strong> prima di tutti gli altri.
                 <br> Il numero varia in base ai giocatori.
             </p>
@@ -170,6 +171,14 @@
             <p>
                 Gli effetti degli Arcana Maggiori sono utilizzabili <strong>solo in questa fase</strong> e si dividono in 3 categorie:
             </p>
+            <div class="expandable-section">
+                <button class="expand-button" aria-expanded="false">
+                    <span class="expand-title">Dettagli avanzati sul punteggio</span>
+                </button>
+                <div class="expand-content" hidden>
+                    <p>Contenuto dettagliato qui...</p>
+                </div>
+            </div>
             <ul class="effect-list">
                 <li class="effect-item  effect-1">
                     <header class="card-header">
@@ -188,7 +197,7 @@
                     </header>
                     <p class="card-text">
                         Un effetto Passivo richede solamente che <strong>l'Arcana Maggiore</strong> sia 
-                        posizionato nella Zona dei Punti Vittoria del giocatore per aver effetto. 
+                        posizionato nella Zona dei Punti Vittoria del giocatore per aver effetto. Valgono per un giocatore soltanto.
                     </p>
                 </li>
                 <li class="effect-item effect-3">
@@ -196,7 +205,7 @@
                         <span class="card-tag card-tag--instant">Istantaneo</span>
                     </header>
                     <p class="card-text">                    
-                        Un effetto Istantaeo si attiva solamente giocando l'Arcana Maggiore.
+                        Un effetto Istantaeo si attiva giocando l'Arcana Maggiore.
                         Ha effetto subito dopo aver dichiarato la 
                         <strong>colonna di Arcana Minori</strong> giocata.
                     </p>
@@ -370,8 +379,9 @@
                         <span class="card-name">Il Carro</span>
                         <span class="card-tag card-tag--instant">Istantaneo</span>
                     </header>
-                    <p class="card-text">Puoi scegliere un <strong>seme aggiuntivo</strong> da giocare. <br>
-                    Si attivano gli effetti di <strong>entrambi i semi</strong>.</p>
+                    <p class="card-text">
+                        <strong>Tutti</strong> gli avversari scartano tutti gli Arcana Minori sul proprio campo.
+                    </p>
                 </li>
 
                 <li class="card-item" data-type="instant active">
@@ -400,7 +410,8 @@
                     </header>
                     <p class="card-text">
                         <strong>Istantaneo:</strong> L’effetto del seme giocato si attiva <strong>2 volte</strong><br>
-                        <strong>Passivo:</strong> L’effetto dei Bastoni diventa “Ottieni <strong>2</strong> punti per ogni Arcana Minore giocato dal giocatore con più Arcana Minori giocati”.
+                        <strong>Passivo:</strong> Le carte Numerate con il seme Bastoni <strong>valgono 4 punti </strong><br> 
+                                                  Le Carte Fulmine con il seme Bastoni <strong>valgono 6 punti </strong>
                     </p>
                 </li>
 
@@ -413,7 +424,7 @@
                     <p class="card-text">
                         Pesca una carta dal mazzo degli Arcana Minori e scartala.  <br>
                         Se il suo seme è <strong>lo stesso</strong> del seme giocato, posiziona dal tuo campo 
-                        <strong>2 Arcana Minori nei Pantheon</strong> 
+                        <strong>2 Arcana Minori nel Pantheon</strong> 
                     </p>
                 </li>
 
@@ -424,14 +435,14 @@
                         <span class="card-tag card-tag--instant">Istantaneo</span>
                     </header>
                     <p class="card-text">
-                        Se possiedi <strong>meno punti vittoria</strong> di un avversario, <strong>vinci</strong> questo turno e concludilo.
+                        Se possiedi <strong>meno carte</strong> nel Pantheon di un avversario, <strong>vinci</strong> questo turno e concludilo.
                     </p>
                 </li>
 
                 <li class="card-item" data-type="passive">
                     <header class="card-header">
                         <span class="card-number">12</span>
-                        <span class="card-name">L'Impiccato</span>
+                        <span class="card-name">L'Appeso</span>
                         <div class="card-tags">
                             <span class="card-tag card-tag--instant">Istantaneo</span>
                             <span class="card-tag card-tag--passive">Passivo</span>
@@ -439,7 +450,7 @@
                     </header>
                     <p class="card-text">
                         <strong class="color-instant">Istantaeo</strong>: Tutti i giocatori scartano Arcana Minori dal proprio campo fino ad 
-                        averne <strong>esattamente 2 in ogni colonna.</strong> <br>
+                        averne <strong>al più 2 in ogni colonna.</strong> <br>
                         <strong class="color-instant">Passivo</strong>: Scarta 1 Arcana Maggiore dalla mano: ottieni <strong>4 punti</strong>. <br> Scarta 1 
                         Arcana Minore dal tuo campo: ottieni <strong>2 punti</strong>. Effetto <strong>cumulabile</strong>. <br>
                         Se hai scartato Arcana Maggiori con questo effetto, <strong>non pescherai Arcana Maggiori</strong> alla fine del turno.
@@ -450,9 +461,15 @@
                     <header class="card-header">
                         <span class="card-number">13</span>
                         <span class="card-name">La Morte</span>
-                        <span class="card-tag card-tag--active">Attivabile</span>
+                        <div class="card-tags">
+                            <span class="card-tag card-tag--instant">Istantaneo</span>
+                            <span class="card-tag card-tag--active">Attivabile</span>
+                        </div>
                     </header>
                     <p class="card-text">
+                        <strong class="color-instant">Istantaeo</strong>: Le figure degli avversari 
+                        non ancora attivate <strong>non attivano il loro effetto. </strong><br>
+                        <strong class="color-instant">Passivo</strong>: 
                         <strong>Scarta</strong> una carta dal Pantheon di un avversario. <br>
                         L'avversario scarta tutti gli Arcana Minori dalla sua mano.
                     </p>
@@ -468,8 +485,8 @@
                         </div>
                     </header>
                     <p class="card-text">
-                        <strong class="color-instant">Istantaeo</strong>: Attiva un <span class="card-tag card-tag--active">Attivabile</span>
-                        nel Pantheon di un avversario. <br>
+                        <strong class="color-instant">Istantaeo</strong>: Scegli un <span class="card-tag card-tag--active">Attivabile</span>
+                        nel Pantheon di un giocatore: quel giocatore lo attiva e l'effetto è attivato per <strong>tutti i giocatori.</strong> <br>
                         <strong class="color-instant">Passivo</strong>: 
                         L’effetto delle <strong>Coppe</strong> diventa: <i>Aggiungi alla tua mano <strong>1 Arcana Maggiore</strong> 
                         oppure <strong>2 Arcana Minori</strong> dalla pila degli scarti</i>.
@@ -713,7 +730,7 @@
 
                 <li class="card-item" data-type="instant">
                     <header class="card-header">
-                        <span class="card-name">Fante</span>
+                        <span class="card-name">Num. 10, Fante</span>
                     </header>
                     <p class="card-text">
                         Scambia l'Arcana Maggiore giocato con un Arcana Maggiore <strong>dalla tua mano</strong>. <br>
@@ -725,7 +742,8 @@
                             <span class="card-name">Asso</span>
                         </header>
                         <p class="card-text">
-                            Vale <strong>4 punti</strong>
+                            <strong>Nella fase di Schieramento:</strong> Se scarti questa carta, puoi scartare tutti gli Arcana Minori
+                            nella tua mano e pescarne <strong>6 dal mazzo</strong>. Vale <strong>2 punti</strong>.
                         </p>
                 </li>
 
@@ -734,7 +752,16 @@
                             <span class="card-name">Numero</span>
                         </header>
                         <p class="card-text">
-                            Vale <strong>2 punti</strong>
+                            Vale <strong>2 punti</strong>.
+                        </p>
+                </li>
+
+                <li class="card-item" data-type="instant">
+                        <header class="card-header">
+                            <span class="card-name">Carta Fulmine</span>
+                        </header>
+                        <p class="card-text">
+                            Vale <strong>4 punti</strong>.
                         </p>
                 </li>
             </ul>
@@ -761,8 +788,9 @@
                         <span class="card-number">Spade</span>
                     </header>
                     <p class="card-text">
-                        Ottieni <strong>2 punti</strong> per ogni carta nel Pantheon
-                        dell'avversario con più carte in questa zona
+                        Ottieni <strong>2 punti</strong> per ogni carta nel tuo Pantheon <strong>che ti manca</strong> per vincere.
+                         <br>
+                        <i>Esempio:</i> con 1 carta su 6 nel Pantheon, <strong>ottieni 10 punti</strong> aggiuntivi
                     </p>
                 </li>
 
@@ -771,7 +799,7 @@
                         <span class="card-number">Denari</span>
                     </header>
                     <p class="card-text">
-                        Pesca <strong>1 Arcana Minore</strong> e posizionalo nel tuo campo
+                        Pesca <strong>2 Arcana Minore</strong> e posizionali nel tuo campo
                     </p>
                 </li>
 
@@ -780,8 +808,8 @@
                         <span class="card-number">Bastoni</span>
                     </header>
                     <p class="card-text">
-                        Ottieni <strong>1 punto</strong> per ogni Arcana Minore <strong>giocato</strong>
-                        dal giocatore con più Arcana Minori giocati
+                        Le carte Numerate con il seme Bastoni <strong>valgono 3 punti</strong><br> 
+                        Le Carte Fulmine con il seme Bastoni <strong>valgono 5 punti</strong> 
                     </p>
                 </li>
                 

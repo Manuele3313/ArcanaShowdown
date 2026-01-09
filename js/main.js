@@ -16,6 +16,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    //Expandable sections
+    document.querySelectorAll('.expand-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const expanded = button.getAttribute('aria-expanded') === 'true';
+            const content = button.nextElementSibling;
+            
+            button.setAttribute('aria-expanded', !expanded);
+            content.hidden = expanded;
+            
+            // Rotate icon
+            const icon = button.querySelector('.expand-icon');
+            icon.textContent = expanded ? 'expand_more' : 'expand_less';
+        });
+    });
+
     // Select theme based on user preference
     if(window.matchMedia("(prefers-color-scheme: dark)").matches){
         document.body.classList.add('dark-mode');
