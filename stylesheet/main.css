@@ -298,6 +298,11 @@ li{
     grid-column-end: 3;
 }
 
+.card-list.major li:nth-child(14){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
 .card-list.major li:nth-child(15){
     grid-column-start: 1;
     grid-column-end: 3;
@@ -352,11 +357,26 @@ li{
 .card-list.minor{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 1rem 0rem;
+    grid-auto-flow: row dense;
 }
 
-.card-list.minor.suits{
+.card-list.suits{
     margin: 1rem 0rem;
     grid-template-columns: 1fr 1fr;
+}
+
+.suits .card-header{
+    justify-content: center;
+    
+}
+
+.suits .card-item{
+    background: var(--color-background-secondary);
+}
+
+.card-list.minor li:nth-child(3){
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
 
 .minor .card-item{
